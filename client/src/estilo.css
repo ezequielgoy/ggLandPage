@@ -1,5 +1,5 @@
 nav {
-  padding: 15px;
+  padding: 5px;
 }
 
 /* Hero section */
@@ -164,4 +164,10 @@ textarea.form-control {
 
 .btn-primary:disabled {
   opacity: 0.5;
+}
+
+.navbar-img {
+  width: 40%;
+  height: 90%;
+  display: block;
 }

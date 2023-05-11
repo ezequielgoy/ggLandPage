@@ -5,15 +5,16 @@ import Home from './pages/landPage';
 import Services from './pages/servicesPage';
 import About from './pages/aboutPage';
 import Contact from './pages/contactPage';
+import ImageLogo from './images/26.png';
 
 function App() {
   return (
     <BrowserRouter>
       <header className="App-header">
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg" className="navbar-header">
           <Container>
             <Navbar.Brand as={Link} to="/">
-              Online Gym Coach
+              <img src={ImageLogo} className="navbar-img" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
