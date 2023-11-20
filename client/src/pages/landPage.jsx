@@ -1,80 +1,225 @@
 import React from 'react';
-import { Container, Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {
+  Container,
+  Button,
+  Card,
+  Row,
+  Col,
+  Carousel,
+  Form,
+} from 'react-bootstrap';
+
+import cambios1 from '../assets/cambios/cambio1.png';
+import cambios2 from '../assets/cambios/cambio2.png';
+import cambios3 from '../assets/cambios/cambio3.png';
+import cambios4 from '../assets/cambios/cambio4.png';
 
 import '../estilo.css';
 
-function landPage() {
+function LandPage() {
+  function handleSubmitNewsLetter() {}
   return (
     <div>
-      <section className="hero">
+      <section className="hero jumbotron-bg pt-5">
         <Container>
-          <h1>Get Fit with an Online Gym Coach</h1>
-          <p>
-            Work with a professional trainer from the comfort of your own home.
-          </p>
-          <div className="d-grid gap-2 col-lg-6 mx-auto">
-            <Button variant="primary" size="lg">
-              Get Started
-            </Button>
-          </div>
+          <Row>
+            <Col xs={12} md={6}>
+              <h1 className="jumbotron-title">
+                get fit with an online gym coAch
+              </h1>
+              <p className="jumbotron-txt">
+                Work with a professional trainer from the comfort of your own
+                home.
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col xl={2}></Col>
+            <Col xl={3}>
+              <Button className="hero-btn">
+                <div className="hero-btn-txt">Get Started</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  ></path>
+                </svg>
+              </Button>
+            </Col>
+          </Row>
         </Container>
       </section>
-      <section className="services">
+
+      <section className="services black-marble-background">
         <Container>
-          <h2>Our Services</h2>
-          <div className="row">
-            <div className="col-lg-4">
-              <Card>
+          <Row>
+            <Col md={4}>
+              <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Personal Training</Card.Title>
                   <Card.Text>
                     Get personalized training sessions tailored to your specific
                     fitness goals.
                   </Card.Text>
+                  <Button className="services-btn">
+                    <div className="service-btn-txt"> Buy Now</div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </Button>
                 </Card.Body>
               </Card>
-            </div>
-            <div className="col-lg-4">
-              <Card>
+            </Col>
+            <Col md={4}>
+              <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Nutrition Coaching</Card.Title>
                   <Card.Text>
                     Learn how to eat for optimal health and fuel your workouts.
                   </Card.Text>
+                  <Button className="services-btn">
+                    <div className="service-btn-txt"> Buy Now</div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </Button>
                 </Card.Body>
               </Card>
-            </div>
-            <div className="col-lg-4">
-              <Card>
+            </Col>
+            <Col md={4}>
+              <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Group Fitness</Card.Title>
                   <Card.Text>
                     Join live virtual fitness classes with other like-minded
                     individuals.
                   </Card.Text>
+                  <Button className="services-btn">
+                    <div className="service-btn-txt"> Buy Now</div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </Button>
                 </Card.Body>
               </Card>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
       </section>
-      <section className="about">
+      <section className="banner">
         <Container>
-          <h2>About Us</h2>
-          <p>
-            We are a team of experienced fitness professionals dedicated to
-            helping you achieve your goals.
-          </p>
+          <Row>
+            <Col>
+              <div className="ggbanner"></div>
+            </Col>
+          </Row>
         </Container>
       </section>
-      <section className="contact">
+      <section className="history ">
+        <Container className="history-bg-lp">
+          <Row>
+            <Col></Col>
+          </Row>
+        </Container>
+      </section>
+      <section className="carousel black-marble-background">
+        <Container className="carousel-container">
+          <Row>
+            <Carousel className="carousel-main">
+              <Carousel.Item>
+                <div className="carousel-slide">
+                  <img src={cambios1} alt="cambios 1" />
+                  <img src={cambios2} alt="cambios 2" />
+
+                  <img src={cambios3} alt="Cambios 3" />
+                  <img src={cambios4} alt="Cambios 4" />
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </Row>
+        </Container>
+      </section>
+      <section className="newsletter">
         <Container>
-          <h2>Contact Us</h2>
+          <Row>
+            <Form className="newsletter-form">
+              <Row>
+                <Col xl={8} md={6}></Col>
+                <Col md={6} xl={2}>
+                  <Form.Control
+                    className="newsletter-control newsletter-input"
+                    type="text"
+                    placeholder="Nombre"
+                  />
+                </Col>
+                <Col xl={8} md={6}></Col>
+                <Col md={6} xl={2}>
+                  <Form.Control
+                    className="newsletter-control"
+                    type="email"
+                    placeholder="Email@ejemplo.com"
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col xl={8} md={6}></Col>
+                <Col xl={2} md={6}>
+                  <Button
+                    type="submit"
+                    onClick={handleSubmitNewsLetter}
+                    className="newsletter-btn"
+                  >
+                    Subscribirme
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+          </Row>
         </Container>
       </section>
     </div>
   );
 }
 
-export default landPage;
+export default LandPage;

@@ -1,23 +1,301 @@
-nav {
-  padding: 5px;
+@font-face {
+  font-family: 'zendots';
+  src: local('zendots'),
+    url('./assets/fonts/ZenDots-Regular.ttf') format('truetype');
 }
 
+.navbar-img {
+  width: 60%;
+  height: auto;
+  display: flex;
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  justify-content: unset;
+}
+.navbar-btn {
+  color: #fff;
+  margin: 0.5em;
+  width: 5rem;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.navbar-btn:hover{
+  background-color: #a06cd5;
+}
+.navbar-container {
+  padding: 0px;
+  width: auto;
+}
+.navbar {
+  --bs-navbar-toggler-padding-x: 0.4rem;
+  width: 100%;
+}
+.navbar-toggler-icon {
+  background-image: url('./assets/elementos/Recurso16.png');
+  width: 3rem;
+  height: 3rem;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sticky + .content {
+  padding-top: 50px;
+}
+
+.black-marble-background {
+  background-image: url('./assets/bgmarmol.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron-title {
+  font-family: zendots;
+}
+.jumbotron-txt {
+  font-family: montserrat;
+}
+.jumbotron-bg {
+  background-image: url('./assets/jumbotron.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  @media (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px (e.g., mobile) */
+    background-size: 768px;
+    padding: 60px 0; /* Adjust padding for better spacing on mobile */
+  }
+}
 /* Hero section */
 .hero {
-  background-color: #1a1a1a;
   color: #fff;
   text-align: center;
-  padding: 50px 0;
+  height: 93vh;
+  margin-top: 70px;
 }
 
 .hero h1 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-top: 12rem;
+  text-align: center;
 }
 
 .hero p {
   font-size: 24px;
   margin-bottom: 40px;
+}
+
+.hero-btn {
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid #d990f4;
+  width: flex;
+  height: flex;
+  transition: all 0.2s ease;
+  display: flex;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+.hero-btn:hover {
+  background: rgb(98, 43, 147);
+  background: linear-gradient(
+    90deg,
+    rgba(98, 43, 147, 1) 0%,
+    rgba(168, 16, 251, 1) 100%
+  );
+  cursor: pointer;
+}
+.hero-btn-txt {
+  margin: 0;
+  font-size: 1.2em;
+}
+.hero-btn svg {
+  width: 1.2em;
+  display: flex;
+  transition: all 0.2s ease;
+}
+
+/* Services LP*/
+.service-card {
+  box-shadow: 0px 0px 0px 2px rgba(121, 14, 170, 1);
+  margin-top: 30px;
+  position: inherit;
+}
+
+.services-btn {
+  background-color: #fff;
+  color: #000;
+  width: flex;
+  height: flex;
+  border: #3654ff 0.05em solid;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  display: flex;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.services-btn:hover {
+  background: rgb(98, 43, 147);
+  background: linear-gradient(
+    90deg,
+    rgba(98, 43, 147, 1) 0%,
+    rgba(168, 16, 251, 1) 100%
+  );
+  cursor: pointer;
+}
+.services-btn-txt {
+  margin: 0;
+
+  font-size: 20px;
+}
+.services-btn svg {
+  width: 1em;
+  display: flex;
+  transition: all 0.2s ease;
+}
+
+.services {
+  height: 86vh;
+  padding: 30px;
+}
+
+.services-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.services-section .service-item {
+  margin-bottom: 30px;
+}
+
+.services-section .service-item h3 {
+  margin-bottom: 20px;
+}
+
+.services-section .service-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.services-section .service-item i {
+  margin-right: 10px;
+}
+
+/*banner*/
+
+.banner {
+  background-image: url('./assets/ggbanner2.jpg');
+  height: 6vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* History Main-page*/
+.history {
+  height: 87vh;
+  background-image: url('./assets/history.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*  Carrousel LP */
+.carousel {
+  position: inherit;
+}
+.carousel-control-next {
+  position: inherit;
+}
+.carousel-control-prev {
+  position: inherit;
+}
+.carousel-item {
+  position: inherit;
+}
+.carousel-inner {
+  position: inherit;
+}
+.carousel-indicators {
+  position: inherit;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-size: 0%;
+}
+.carousel-indicators .active {
+  height: 3px;
+  opacity: 0.3;
+}
+.carousel-container {
+  width: 100%;
+  height: 95vh;
+}
+.carousel-main {
+  margin-top: 100px;
+}
+.carousel-slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-slide img {
+  width: calc(25% - 1rem); /* Adjust the width based on the desired layout */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+  @media (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px (e.g., mobile) */
+    width: calc(50% - 1rem);
+  }
+}
+
+/*   News letter   */
+
+.newsletter {
+  background-image: url('./assets/Newsletter.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 28vh;
+}
+.newsletter-form {
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.newsletter-control {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.newsletter-btn {
+  background: rgb(7, 0, 42);
+  background: linear-gradient(
+    90deg,
+    rgba(7, 0, 42, 1) 29.6%,
+    rgba(179, 21, 252, 1) 100%
+  );
+  border-radius: 10px;
+  display: flex;
+  font-size: 20px;
+  gap: 0.5rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 /* Contact Page */
@@ -68,39 +346,6 @@ nav {
 
 /* Services Page */
 
-.services-section {
-  background-color: #fff;
-  padding: 100px 0;
-}
-
-.services-section h2 {
-  margin-bottom: 50px;
-}
-
-.services-section p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
-.services-section .service-item {
-  margin-bottom: 30px;
-}
-
-.services-section .service-item h3 {
-  margin-bottom: 20px;
-}
-
-.services-section .service-item p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.services-section .service-item i {
-  margin-right: 10px;
-}
-
 /* About Page */
 .about-header {
   text-align: center;
@@ -124,12 +369,12 @@ nav {
 }
 
 /* Contact Page */
-.form-label {
+.contact-form-label {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.form-control {
+.contact-form-control {
   font-size: 1.1rem;
   border-radius: 0;
   border: 0;
@@ -144,30 +389,23 @@ textarea.form-control {
   height: 150px;
 }
 
-.btn-primary {
-  border-radius: 0;
-  border: none;
-  background-color: #a16cd5;
+.social-icons {
+  color: #a16cd5;
+  margin-right: 10px;
 }
 
-.btn-primary:hover {
-  background-color: #028a0f;
+.social-icons a {
+  margin-left: 10px;
 }
 
-.btn-primary:focus {
-  box-shadow: none;
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  height: 30vh;
 }
 
-.btn-primary:active {
-  background-color: #028a0f;
-}
-
-.btn-primary:disabled {
-  opacity: 0.5;
-}
-
-.navbar-img {
-  width: 40%;
-  height: 90%;
-  display: block;
-}
+/*
+Gradient boton newsletter
+background: rgb(7,0,42);
+background: linear-gradient(90deg, rgba(7,0,42,1) 29.6%, rgba(179,21,252,1) 100%);
+*/
