@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import { Container, Navbar, Nav, Col, Row } from 'react-bootstrap';
 import Services from './pages/ServicesPage';
-import About from './pages/AboutPage';
+import Resultados from './pages/ResultsPage';
 import Contact from './pages/ContactPage';
 import LandPage from './pages/LandPage';
 
@@ -12,6 +12,7 @@ import {
   faWhatsapp,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import FormCheckout from './pages/FormCheckout';
 
 function App() {
   return (
@@ -36,14 +37,14 @@ function App() {
                 <Nav.Link as={Link} to="/" className="navbar-btn">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/services" className="navbar-btn">
-                  Services
-                </Nav.Link>
                 <Nav.Link as={Link} to="/about" className="navbar-btn">
-                  About
+                  Mi Historia
                 </Nav.Link>
-                <Nav.Link as={Link} to="/contact" className="navbar-btn">
-                  Contact
+                <Nav.Link as={Link} to="/resultados" className="navbar-btn">
+                  Resultados
+                </Nav.Link>
+                <Nav.Link as={Link} to="/services" className="navbar-btn">
+                  Entrenemos
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -52,8 +53,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<FormCheckout />} />
+          <Route path="/resultados" element={<Resultados />} />
           <Route path="/services" element={<Services />} />
           <Route path="/" element={<LandPage />} />
         </Routes>

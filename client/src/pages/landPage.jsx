@@ -15,9 +15,14 @@ import cambios3 from '../assets/cambios/cambio3.png';
 import cambios4 from '../assets/cambios/cambio4.png';
 
 import '../estilo.css';
+import EntrenemosBtn from '../component/EntrenemosBtn';
 
 function LandPage() {
+  
   function handleSubmitNewsLetter() {}
+  const handleClick = () => {
+
+  }
   return (
     <div>
       <section className="hero jumbotron-bg pt-5">
@@ -58,10 +63,59 @@ function LandPage() {
         </Container>
       </section>
 
+      <section className="banner">
+        <Container>
+          <Row>
+            <Col>
+              <div className="ggbanner"></div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="history ">
+        <Container className="history-bg-lp">
+          <Row>
+            <Col></Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className='bannerEntrenemos' >
+        <Container >
+          <Row>
+            <Col>
+            <h3 className='txtBannerEntrenemos'>"No importa la genetica que tengas, no importa si intentaste antes y fallaste, no importa si alguna vez te dijeron que no podiasm no importa de donde venis sino a donde vas. Tu pasado no define tu destino, tu mentalidad si."</h3>
+            </Col>
+
+          </Row>
+          <Row>
+            <EntrenemosBtn/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="carousel black-marble-background">
+        <Container className="carousel-container">
+          <Row>
+            <Carousel className="carousel-main">
+              <Carousel.Item>
+                <div className="carousel-slide">
+                  <img src={cambios1} alt="cambios 1" />
+                  <img src={cambios2} alt="cambios 2" />
+
+                  <img src={cambios3} alt="Cambios 3" />
+                  <img src={cambios4} alt="Cambios 4" />
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </Row>
+        </Container>
+      </section>
       <section className="services black-marble-background">
         <Container>
           <Row>
-            <Col md={4}>
+            <Col md={6}>
               <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Personal Training</Card.Title>
@@ -69,7 +123,7 @@ function LandPage() {
                     Get personalized training sessions tailored to your specific
                     fitness goals.
                   </Card.Text>
-                  <Button className="services-btn">
+                  <Button className="services-btn" onClick={handleClick}>
                     <div className="service-btn-txt"> Buy Now</div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +143,7 @@ function LandPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            <Col md={6}>
               <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Nutrition Coaching</Card.Title>
@@ -116,7 +170,9 @@ function LandPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
+            </Row>
+            <Row>
+            <Col md={6}>
               <Card className="service-card">
                 <Card.Body>
                   <Card.Title>Group Fitness</Card.Title>
@@ -142,44 +198,43 @@ function LandPage() {
                     </svg>
                   </Button>
                 </Card.Body>
+                
+              </Card>
+            </Col>
+            <Col md={6}>
+              <Card className="service-card">
+                <Card.Body>
+                  <Card.Title>Group Fitness</Card.Title>
+                  <Card.Text>
+                    Join live virtual fitness classes with other like-minded
+                    individuals.
+                  </Card.Text>
+                  <Button className="services-btn">
+                    <div className="service-btn-txt"> Buy Now</div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      ></path>
+                    </svg>
+                  </Button>
+                </Card.Body>
+                
               </Card>
             </Col>
           </Row>
         </Container>
       </section>
-      <section className="banner">
-        <Container>
-          <Row>
-            <Col>
-              <div className="ggbanner"></div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="history ">
-        <Container className="history-bg-lp">
-          <Row>
-            <Col></Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="carousel black-marble-background">
-        <Container className="carousel-container">
-          <Row>
-            <Carousel className="carousel-main">
-              <Carousel.Item>
-                <div className="carousel-slide">
-                  <img src={cambios1} alt="cambios 1" />
-                  <img src={cambios2} alt="cambios 2" />
 
-                  <img src={cambios3} alt="Cambios 3" />
-                  <img src={cambios4} alt="Cambios 4" />
-                </div>
-              </Carousel.Item>
-            </Carousel>
-          </Row>
-        </Container>
-      </section>
+
       <section className="newsletter">
         <Container>
           <Row>

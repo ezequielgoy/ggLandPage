@@ -7,8 +7,9 @@
 .navbar-img {
   width: 60%;
   height: auto;
-  display: flex;
+  
 }
+/*
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-lg,
@@ -16,23 +17,20 @@
 .navbar > .container-sm,
 .navbar > .container-xl,
 .navbar > .container-xxl {
-  justify-content: unset;
+  justify-content: center;
 }
+*/
 .navbar-btn {
   color: #fff;
   margin: 0.5em;
-  width: 5rem;
-  border-radius: 10%;
-  text-align: center;
-}
+  width: flex;
+  border-radius: 15%;
+  }
 
 .navbar-btn:hover{
   background-color: #a06cd5;
 }
-.navbar-container {
-  padding: 0px;
-  width: auto;
-}
+
 .navbar {
   --bs-navbar-toggler-padding-x: 0.4rem;
   width: 100%;
@@ -41,6 +39,7 @@
   background-image: url('./assets/elementos/Recurso16.png');
   width: 3rem;
   height: 3rem;
+  
 }
 .sticky {
   position: fixed;
@@ -124,6 +123,84 @@
   transition: all 0.2s ease;
 }
 
+
+/*banner*/
+
+.banner {
+  background-image: url('./assets/ggbanner2.jpg');
+  height: 6vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Banner entrenemos*/
+.bannerEntrenemos{
+  background-image: url('./assets/bannerEntrenemos.png');
+  height: 30vh;
+}
+
+.txtBannerEntrenemos{
+  margin-top: 0.7rem;
+  color: #fff;
+  text-align: center;
+  
+}
+
+/* History Main-page*/
+.history {
+  height: 87vh;
+  background-image: url('./assets/MainHistoryBackground.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/*  Carrousel LP */
+.carousel {
+  position: inherit;
+}
+.carousel-control-next {
+  position: inherit;
+}
+.carousel-control-prev {
+  position: inherit;
+}
+.carousel-item {
+  position: inherit;
+}
+.carousel-inner {
+  position: inherit;
+}
+.carousel-indicators {
+  position: inherit;
+}
+
+.carousel-indicators .active {
+  height: 3px;
+  
+}
+.carousel-container {
+  width: 100%;
+  height: 95vh;
+}
+.carousel-main {
+  margin-top: 100px;
+}
+.carousel-slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-slide img {
+  width: calc(25% - 1rem); /* Adjust the width based on the desired layout */
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+  @media (max-width: 768px) {
+    /* Adjust styles for screens smaller than 768px (e.g., mobile) */
+    width: calc(50% - 1rem);
+  }
+}
+
 /* Services LP*/
 .service-card {
   box-shadow: 0px 0px 0px 2px rgba(121, 14, 170, 1);
@@ -192,73 +269,6 @@
 
 .services-section .service-item i {
   margin-right: 10px;
-}
-
-/*banner*/
-
-.banner {
-  background-image: url('./assets/ggbanner2.jpg');
-  height: 6vh;
-  background-size: cover;
-  background-position: center;
-}
-
-/* History Main-page*/
-.history {
-  height: 87vh;
-  background-image: url('./assets/history.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/*  Carrousel LP */
-.carousel {
-  position: inherit;
-}
-.carousel-control-next {
-  position: inherit;
-}
-.carousel-control-prev {
-  position: inherit;
-}
-.carousel-item {
-  position: inherit;
-}
-.carousel-inner {
-  position: inherit;
-}
-.carousel-indicators {
-  position: inherit;
-}
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  background-size: 0%;
-}
-.carousel-indicators .active {
-  height: 3px;
-  opacity: 0.3;
-}
-.carousel-container {
-  width: 100%;
-  height: 95vh;
-}
-.carousel-main {
-  margin-top: 100px;
-}
-.carousel-slide {
-  display: flex;
-  justify-content: space-between;
-}
-
-.carousel-slide img {
-  width: calc(25% - 1rem); /* Adjust the width based on the desired layout */
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 10px;
-  @media (max-width: 768px) {
-    /* Adjust styles for screens smaller than 768px (e.g., mobile) */
-    width: calc(50% - 1rem);
-  }
 }
 
 /*   News letter   */
